@@ -9,25 +9,38 @@ package Modelo;
  *
  * @author n226fg1
  */
-public class Validacao
+public class Validacao extends absPropriedades
 {
-    public String mensagem;
-    public String num1;
-    public String num2;
-    public Double n1;
-    public Double n2;
     
     public void Validar()
     {
-        this.mensagem = "";
+        setMensagem("");
+        
         try
         {
-            this.n1 = Double.parseDouble(num1);
-            this.n2 = Double.parseDouble(num2);
+            setN1(Double.parseDouble(getNum1())); 
+            
         }
-        catch (Exception e)
+        catch (NumberFormatException e)
         {
-            this.mensagem = "Erro de Converção";
+            setMensagem("Erro de Converção no campo 1 \n");
         }
+        
+        try
+        {
+           
+            setN2(Double.parseDouble(getNum2()));
+        }
+        catch (NumberFormatException e)
+        {
+            setMensagem(this.getMensagem() + "Erro de Converção no campo 2");
+            
+        }
+        
+        if (this.getNum2().equals("0") && this.getOp().equals("/"))
+        {
+            this.setMensagem(this.getMensagem() + "Divisão por 0");
+        }
+        
     }
 }

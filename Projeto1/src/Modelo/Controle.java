@@ -9,32 +9,29 @@ package Modelo;
  *
  * @author n226fg1
  */
-public class Controle
+public class Controle extends absPropriedades
 {
-    public String mensagem;
-    public String num1;
-    public String num2;
-    public String op;
-    public String resultado;
-    public void Calcular()
+    
+    public void Calcular() 
     {
-     this.mensagem = "";
+     setMensagem("");
      Validacao validacao = new Validacao();
-     validacao.num1 = this.num1;
-     validacao.num2 = this.num2;
+     validacao.setNum1(this.getNum1());
+     validacao.setNum2(this.getNum2());
+     validacao.setOp(this.getOp());
      validacao.Validar();
-     if (validacao.mensagem.equals(""))
+     if (validacao.getMensagem().equals(""))
      {
          Calculos calculos = new Calculos();
-         calculos.n1 = validacao.n1;
-         calculos.n2 = validacao.n2;
-         calculos.op = this.op;
+         calculos.setN1(validacao.getN1());
+         calculos.setN2(validacao.getN2());
+         calculos.setOp(this.getOp());
          calculos.Calcular();
-         this.resultado = calculos.resultado;
+         setResultado(calculos.getResultado());
      }
      else
      {
-         this.mensagem = validacao.mensagem;
+         setMensagem(this.getMensagem());
      }
     }
 }

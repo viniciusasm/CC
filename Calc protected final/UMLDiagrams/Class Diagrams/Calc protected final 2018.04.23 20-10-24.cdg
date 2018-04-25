@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Calc protected final">
+  <ClassDiagramComponents>
+    <Class name="frmPrincipal" package="Apresentacao" visibility="public" xPosition="80.0" yPosition="898.0">
+      <Fields>
+        <Field name="btgCalculos" type="javax.swing.ButtonGroup" visibility="private"/>
+        <Field name="btnCalcular" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lblPrimeiroNumero" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lblResposta" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lblSegundoNumero" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="rdbDividir" type="javax.swing.JRadioButton" visibility="private"/>
+        <Field name="rdbMultiplicar" type="javax.swing.JRadioButton" visibility="private"/>
+        <Field name="rdbSomar" type="javax.swing.JRadioButton" visibility="private"/>
+        <Field name="rdbSubtrair" type="javax.swing.JRadioButton" visibility="private"/>
+        <Field name="txfPrimeiroNumero" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="txfSegundoNumero" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="java.awt.Frame" name="parent"/>
+          <Argument type="boolean" name="modal"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="rdbDividirActionPerformed" returnType="//GEN-FIRST:event_rdbDividirActionPerformed void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="btnCalcularActionPerformed" returnType="//GEN-FIRST:event_btnCalcularActionPerformed void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CalcProtectedFinal" package="calc.pkgprotected.pkgfinal" visibility="public" xPosition="80.0" yPosition="1368.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="absPropriedades" package="Modelo" visibility="public" xPosition="459.0" yPosition="262.0">
+      <Fields>
+        <Field name="mensagem" type="String" visibility="public"/>
+        <Field name="num1" type="String" visibility="protected"/>
+        <Field name="num2" type="String" visibility="protected"/>
+        <Field name="op" type="String" visibility="protected"/>
+        <Field name="n1" type="Double" visibility="protected"/>
+        <Field name="n2" type="Double" visibility="protected"/>
+        <Field name="resultado" type="Double" visibility="protected"/>
+        <Field name="resposta" type="String" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="num1"/>
+          <Argument type="String" name="num2"/>
+          <Argument type="String" name="op"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="op"/>
+          <Argument type="Double" name="n1"/>
+          <Argument type="Double" name="n2"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="Somar" returnType="void" visibility="public">
+          <Argument type="Double" name="n1"/>
+          <Argument type="Double" name="n2"/>
+        </Method>
+        <Method name="Subtrair" returnType="void" visibility="public">
+          <Argument type="Double" name="n1"/>
+          <Argument type="Double" name="n2"/>
+        </Method>
+        <Method name="Multiplicar" returnType="void" visibility="public">
+          <Argument type="Double" name="n1"/>
+          <Argument type="Double" name="n2"/>
+        </Method>
+        <Method name="Dividir" returnType="void" visibility="public">
+          <Argument type="Double" name="n1"/>
+          <Argument type="Double" name="n2"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Calcular" package="Modelo" visibility="public" xPosition="35.0" yPosition="168.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="op"/>
+          <Argument type="Double" name="n1"/>
+          <Argument type="Double" name="n2"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="Executar" returnType="void" visibility="public" isFinal="true"/>
+        <Method name="Dividir" returnType="void" visibility="public" isFinal="true">
+          <Argument type="Double" name="n1"/>
+          <Argument type="Double" name="n2"/>
+        </Method>
+        <Method name="Multiplicar" returnType="void" visibility="public" isFinal="true">
+          <Argument type="Double" name="n1"/>
+          <Argument type="Double" name="n2"/>
+        </Method>
+        <Method name="Subtrair" returnType="void" visibility="public" isFinal="true">
+          <Argument type="Double" name="n1"/>
+          <Argument type="Double" name="n2"/>
+        </Method>
+        <Method name="Somar" returnType="void" visibility="public" isFinal="true">
+          <Argument type="Double" name="n1"/>
+          <Argument type="Double" name="n2"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Controle" package="Modelo" visibility="public" xPosition="346.0" yPosition="711.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="num1"/>
+          <Argument type="String" name="num2"/>
+          <Argument type="String" name="op"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="Executar" returnType="void" visibility="private" isFinal="true"/>
+      </Methods>
+    </Class>
+    <Class name="Validacao" package="Modelo" visibility="public" xPosition="35.0" yPosition="488.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="num1"/>
+          <Argument type="String" name="num2"/>
+          <Argument type="String" name="op"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="Validar" returnType="void" visibility="private" isFinal="true"/>
+      </Methods>
+    </Class>
+    <Interface name="intMetodos" package="Modelo" visibility="public" xPosition="391.0" yPosition="6.0">
+      <Methods>
+        <Method name="Somar" returnType="void" visibility="public">
+          <Argument type="Double" name="n1"/>
+          <Argument type="Double" name="n2"/>
+        </Method>
+        <Method name="Subtrair" returnType="void" visibility="public">
+          <Argument type="Double" name="n1"/>
+          <Argument type="Double" name="n2"/>
+        </Method>
+        <Method name="Multiplicar" returnType="void" visibility="public">
+          <Argument type="Double" name="n1"/>
+          <Argument type="Double" name="n2"/>
+        </Method>
+        <Method name="Dividir" returnType="void" visibility="public">
+          <Argument type="Double" name="n1"/>
+          <Argument type="Double" name="n2"/>
+        </Method>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="Modelo.Calcular" target="Modelo.absPropriedades"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Modelo.absPropriedades" target="Modelo.intMetodos"/>
+    <UseRelation name="" source="Apresentacao.frmPrincipal" target="Modelo.Controle" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Modelo.Validacao" target="Modelo.absPropriedades"/>
+    <IsRelation name="is" source="Modelo.Controle" target="Modelo.absPropriedades"/>
+    <UseRelation name="" source="Modelo.Controle" target="Modelo.absPropriedades" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="calc.pkgprotected.pkgfinal.CalcProtectedFinal" target="Apresentacao.frmPrincipal" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

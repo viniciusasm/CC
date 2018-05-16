@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="senoCosTang">
+  <ClassDiagramComponents>
+    <Class name="frmPrincipal" package="Apresentacao" visibility="public" xPosition="40.0" yPosition="730.0">
+      <Fields>
+        <Field name="btnCalcular" type="javax.swing.JButton" visibility="private"/>
+        <Field name="lblNumero" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="lblResposta" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="txfNumero" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="java.awt.Frame" name="parent"/>
+          <Argument type="boolean" name="modal"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="btnCalcularActionPerformed" returnType="//GEN-FIRST:event_btnCalcularActionPerformed void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="absPropriedades" package="Modelo" visibility="public" xPosition="297.0" yPosition="182.0">
+      <Fields>
+        <Field name="mensagem" type="String" visibility="public"/>
+        <Field name="numero" type="String" visibility="protected"/>
+        <Field name="n1" type="Double" visibility="protected"/>
+        <Field name="seno" type="Double" visibility="protected"/>
+        <Field name="cosseno" type="Double" visibility="protected"/>
+        <Field name="tangente" type="Double" visibility="protected"/>
+        <Field name="resposta" type="String" visibility="protected"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="numero"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="double" name="n1"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="Executar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Calcular" package="Modelo" visibility="public" xPosition="40.0" yPosition="182.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="double" name="n1"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="Executar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Controle" package="Modelo" visibility="public" xPosition="297.0" yPosition="540.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="numero"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="Executar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Validacao" package="Modelo" visibility="public" xPosition="40.0" yPosition="353.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="numero"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="Executar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="SenoCosTang" package="senocostang" visibility="public" xPosition="280.0" yPosition="1045.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="intMetodos" package="Modelo" visibility="public" xPosition="326.0" yPosition="20.0">
+      <Methods>
+        <Method name="Executar" returnType="void" visibility="package"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation name="" source="Modelo.Controle" target="Modelo.absPropriedades" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Modelo.Validacao" target="Modelo.absPropriedades"/>
+    <UseRelation name="" source="Apresentacao.frmPrincipal" target="Modelo.Controle" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="Modelo.Calcular" target="Modelo.absPropriedades"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Modelo.absPropriedades" target="Modelo.intMetodos"/>
+    <IsRelation name="is" source="Modelo.Controle" target="Modelo.absPropriedades"/>
+    <UseRelation name="" source="senocostang.SenoCosTang" target="Apresentacao.frmPrincipal" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
